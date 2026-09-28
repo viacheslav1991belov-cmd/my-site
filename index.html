@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="color-scheme" content="light">
+<html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Белов Вячеслав — кейсы</title>
 <style>
-:root{--bg:#fbfbfd;--bg2:#f5f5f7;--fg:#1d1d1f;--mut:#6e6e73;--card:#fff;--line:#d2d2d7;--acc:#0071e3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--bg2:#0b0b0d;--fg:#f5f5f7;--mut:#a1a1a6;--card:#161618;--line:#333336;--acc:#2997ff}}
-:root[data-theme="dark"]{--bg:#000;--bg2:#0b0b0d;--fg:#f5f5f7;--mut:#a1a1a6;--card:#161618;--line:#333336;--acc:#2997ff}
+:root{--bg:#fbfbfd;--bg2:#f5f5f7;--fg:#1d1d1f;--mut:#6e6e73;--card:#fff;--line:#d2d2d7;--acc:#0071e3;--hbg:radial-gradient(ellipse at 50% 0,#dce9ff 0,#fbfbfd 68%);--h1a:#000;--h1b:#6e6e73;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--bg2:#0b0b0d;--fg:#f5f5f7;--mut:#a1a1a6;--card:#161618;--line:#333336;--acc:#2997ff;--hbg:radial-gradient(ellipse at 50% 0,#1a2a4a 0,#000 65%);--h1a:#fff;--h1b:#8b8b95}}
+:root[data-theme="dark"]{--bg:#000;--bg2:#0b0b0d;--fg:#f5f5f7;--mut:#a1a1a6;--card:#161618;--line:#333336;--acc:#2997ff;--hbg:radial-gradient(ellipse at 50% 0,#1a2a4a 0,#000 65%);--h1a:#fff;--h1b:#8b8b95}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:60px}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.4}
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;backdrop-filter:saturate(180%) blur(20px);background:color-mix(in srgb,var(--bg) 72%,transparent);border-bottom:1px solid var(--line);font-size:13px}
 nav a{color:var(--fg);text-decoration:none;margin-left:22px;opacity:.8}nav b{font-weight:600}
-.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 22px;background:radial-gradient(ellipse at 50% 0,#1a2a4a 0,#000 65%);color:#f5f5f7}
-.hero p.k{color:#a1a1a6;font-size:19px;margin:0 0 14px}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 22px;background:var(--hbg);color:var(--fg)}
+.hero p.k{color:var(--mut);font-size:19px;margin:0 0 14px}
 h1{font-size:clamp(40px,9vw,96px);letter-spacing:-.04em;line-height:1.02;margin:0;font-weight:700;max-width:1000px}
 .g{background:linear-gradient(90deg,#2997ff,#bf5af2 55%,#ff375f);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero .sub{max-width:620px;color:#a1a1a6;font-size:21px;margin:26px 0 34px}
@@ -60,11 +60,11 @@ h1{font-size:clamp(40px,8.5vw,96px)}.btns{margin-top:40px}
 .num.tx{font-size:clamp(26px,3vw,38px);white-space:normal;line-height:1.15;letter-spacing:-.02em}
 .st5{grid-template-columns:repeat(6,1fr)}.st5 .st{grid-column:span 2}.st5 .st:nth-child(n+4){grid-column:span 3}
 @media(max-width:800px){.st5{grid-template-columns:1fr}.st5 .st,.st5 .st:nth-child(n+4){grid-column:auto}}
-.flips{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start}.flip[aria-expanded=true] em{max-height:900px}
+.flips{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:stretch}.flip{display:block;height:100%}.flip b{min-height:2.7em;line-height:1.35}.flip[aria-expanded=true] em{max-height:900px}
 .hero{position:relative;overflow:hidden;--mx:50%;--my:40%}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(190px circle at var(--mx) var(--my),rgba(41,151,255,.24),rgba(191,90,242,.1) 50%,transparent 100%);pointer-events:none}
 .hero>*{position:relative}
-h1{transition:transform .3s ease-out;--x:50%;--y:50%;background:radial-gradient(170px circle at var(--x) var(--y),#fff 0,#8b8b95 100%);-webkit-background-clip:text;background-clip:text;color:transparent;will-change:transform}
+h1{transition:transform .3s ease-out;--x:50%;--y:50%;background:radial-gradient(170px circle at var(--x) var(--y),var(--h1a) 0,var(--h1b) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;will-change:transform}
 h1 .g{filter:hue-rotate(var(--hue,0deg))}
 .btns a,.tabs button,.tg button,nav a{transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,background .25s,color .25s,border-color .25s}
 @media(hover:hover){
@@ -73,8 +73,11 @@ h1 .g{filter:hue-rotate(var(--hue,0deg))}
 .tabs button:hover,.tg button:hover{transform:scale(1.1);border-color:var(--acc);box-shadow:0 0 22px color-mix(in srgb,var(--acc) 65%,transparent)}
 .flip{transition:transform .25s,box-shadow .25s,border-color .25s}.flip:hover{transform:scale(1.03);border-color:var(--acc);box-shadow:0 0 26px color-mix(in srgb,var(--acc) 40%,transparent)}
 nav a:hover{opacity:1;color:var(--acc)}}
+#tt{margin-left:22px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--fg);font-size:16px;line-height:1;cursor:pointer;vertical-align:middle;transition:transform .25s,box-shadow .25s,border-color .25s}
+@media(hover:hover){#tt:hover{transform:scale(1.1);border-color:var(--acc);box-shadow:0 0 22px color-mix(in srgb,var(--acc) 65%,transparent)}}
+body,nav,.st,.pane,.big,.flip,.hero{transition:background-color .4s,color .4s,border-color .4s}
 </style></head><body>
-<nav><b>Вячеслав Белов</b><span><a href="#college">Колледж</a><a href="#agifta">АГИФТА</a><a href="#contact">Контакты</a></span></nav>
+<nav><b>Вячеслав Белов</b><span><a href="#college">Колледж</a><a href="#agifta">АГИФТА</a><a href="#contact">Контакты</a><button id="tt" type="button" aria-label="Сменить тему"></button></span></nav>
 
 <header class="hero">
 <p class="k">Директор по маркетингу · стаж 12 лет · г. Казань</p>
@@ -143,7 +146,7 @@ nav a:hover{opacity:1;color:var(--acc)}}
 <div class="flips rv">
 <button class="flip" aria-expanded="false"><b>MyTarget</b><em>Результат был нестабильным и до меня, и при мне. Отказались от канала.</em></button>
 <button class="flip" aria-expanded="false"><b>SMS по базе</b><em>Результат неудовлетворительный, закрыл тест.</em></button>
-<button class="flip" aria-expanded="false"><b>Обзвон колл-центром</b><em>Звонки по старым клиентам тоже не дали результата.</em></button>
+<button class="flip" aria-expanded="false"><b>Обзвон сторонним колл-центром</b><em>Обзвон старых клиентов сторонним колл-центром оказался неэффективным, тест остановили.</em></button>
 </div>
 <div class="carry rv"><small>Что переношу на новое место</small>Прежде чем принимать эмоциональные решения, выясняю, где ломается воронка и понимает ли команда, что она продаёт.<br>Считаю окупаемость каждой кампании.<br>Структурирую работу даже тогда, когда решения нужно принимать быстро.</div>
 </div></section>
@@ -176,4 +179,10 @@ hero.style.setProperty('--mx',x+'px');hero.style.setProperty('--my',y+'px');
 h1.style.setProperty('--x',(e.clientX-h.left)+'px');h1.style.setProperty('--y',(e.clientY-h.top)+'px');h1.style.setProperty('--hue',(nx*160)+'deg');
 h1.style.transform='perspective(900px) rotateY('+(nx*10)+'deg) rotateX('+(-ny*8)+'deg)'});
 hero.addEventListener('pointerleave',function(){h1.style.transform='';h1.style.setProperty('--hue','0deg')});
+var root=document.documentElement,tt=document.getElementById('tt'),mq=window.matchMedia('(prefers-color-scheme: dark)');
+function eff(){return root.getAttribute('data-theme')||(mq.matches?'dark':'light')}
+function icon(){tt.textContent=eff()=='dark'?'☀':'☾'}
+try{var sv=localStorage.getItem('theme');if(sv)root.setAttribute('data-theme',sv)}catch(e){}
+icon();if(mq.addEventListener)mq.addEventListener('change',icon);
+tt.onclick=function(){var n=eff()=='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}icon()};
 </script></body></html>
