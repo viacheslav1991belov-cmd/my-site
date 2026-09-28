@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Белов Вячеслав — кейсы</title>
+<style>
+:root{--bg:#fbfbfd;--bg2:#f5f5f7;--fg:#1d1d1f;--mut:#6e6e73;--card:#fff;--line:#d2d2d7;--acc:#0071e3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--bg2:#0b0b0d;--fg:#f5f5f7;--mut:#a1a1a6;--card:#161618;--line:#333336;--acc:#2997ff}}
+:root[data-theme="dark"]{--bg:#000;--bg2:#0b0b0d;--fg:#f5f5f7;--mut:#a1a1a6;--card:#161618;--line:#333336;--acc:#2997ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.4}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;backdrop-filter:saturate(180%) blur(20px);background:color-mix(in srgb,var(--bg) 72%,transparent);border-bottom:1px solid var(--line);font-size:13px}
+nav a{color:var(--fg);text-decoration:none;margin-left:22px;opacity:.8}nav b{font-weight:600}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 22px;background:radial-gradient(ellipse at 50% 0,#1a2a4a 0,#000 65%);color:#f5f5f7}
+.hero p.k{color:#a1a1a6;font-size:19px;margin:0 0 14px}
+h1{font-size:clamp(40px,9vw,96px);letter-spacing:-.04em;line-height:1.02;margin:0;font-weight:700;max-width:1000px}
+.g{background:linear-gradient(90deg,#2997ff,#bf5af2 55%,#ff375f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{max-width:620px;color:#a1a1a6;font-size:21px;margin:26px 0 34px}
+.btns a{display:inline-block;margin:6px;padding:12px 24px;border-radius:99px;background:#0071e3;color:#fff;text-decoration:none;font-size:17px}
+.btns a.o{background:transparent;border:1px solid #0071e3;color:#2997ff}
+section{padding:110px 22px;max-width:1080px;margin:auto}
+.full{max-width:none;background:var(--bg2)}.full>div{max-width:1080px;margin:auto}
+.tag{color:var(--acc);font-weight:600;font-size:17px;margin:0 0 10px}
+h2{font-size:clamp(34px,6vw,64px);letter-spacing:-.035em;line-height:1.05;margin:0 0 22px;font-weight:700}
+.lead{font-size:clamp(18px,2.2vw,24px);color:var(--mut);max-width:760px;margin:0 0 50px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.st{background:var(--card);border-radius:28px;padding:32px 26px}
+.st small{color:var(--mut);font-size:14px;display:block;min-height:20px}
+.num{font-size:clamp(46px,7vw,76px);font-weight:700;letter-spacing:-.04em;line-height:1.05;margin:6px 0}
+.st p{margin:0;color:var(--mut);font-size:15px}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
+h3{font-size:28px;letter-spacing:-.02em;margin:70px 0 18px}
+.fun{background:var(--card);border-radius:28px;padding:34px 26px}
+.bar{margin:0 0 18px}.bar span{display:block;font-size:15px;color:var(--mut);margin-bottom:6px}
+.bar i{display:block;height:54px;border-radius:14px;width:0;background:linear-gradient(90deg,#2997ff,#bf5af2);transition:width 1.6s cubic-bezier(.2,.7,.2,1);display:flex;align-items:center;padding-left:18px;color:#fff;font-weight:700;font-style:normal;font-size:22px;white-space:nowrap}
+.fun.in .b1{width:100%}.fun.in .b2{width:38%;min-width:170px;transition-delay:.4s}.fun.in .b3{width:22%;min-width:150px;transition-delay:.8s}
+.note{color:var(--mut);margin:8px 0 0;font-size:16px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tabs button,.tg button{font:inherit;font-size:15px;border:1px solid var(--line);background:transparent;color:var(--fg);padding:9px 18px;border-radius:99px;cursor:pointer}
+.tabs button.on,.tg button.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.pane{display:none;background:var(--card);border-radius:28px;padding:30px 28px;font-size:19px;animation:f .5s}.pane.on{display:block}
+@keyframes f{from{opacity:0;transform:translateY(10px)}}
+.tg{display:inline-flex;gap:8px;margin-bottom:18px}
+.big{background:var(--card);border-radius:28px;padding:40px 26px;text-align:center}
+.big .num{font-size:clamp(64px,14vw,150px);transition:color .4s}.big.was .num{color:#ff453a}.big.now .num{color:#30d158}
+.flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.flip{font:inherit;text-align:left;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;cursor:pointer}
+.flip b{display:block;font-size:18px}.flip em{display:block;font-style:normal;color:var(--mut);max-height:0;overflow:hidden;transition:max-height .5s,margin .5s;font-size:16px}
+.flip[aria-expanded=true] em{max-height:200px;margin-top:10px}.flip b:after{content:" +";color:var(--acc)}.flip[aria-expanded=true] b:after{content:" −"}
+.carry{background:linear-gradient(135deg,#0a84ff,#5e5ce6);color:#fff;border-radius:28px;padding:34px 30px;margin-top:40px;font-size:22px;font-weight:600;letter-spacing:-.01em}
+.carry small{display:block;opacity:.75;font-size:14px;font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em}
+footer{text-align:center;padding:100px 22px;background:#000;color:#f5f5f7}
+footer h2{margin-bottom:20px}footer a{color:#2997ff;text-decoration:none;font-size:22px;display:block;margin:8px}
+h1,h2,h3{text-wrap:balance}.lead,.pane,.st p,.carry{text-wrap:pretty}
+.stats{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.st{display:flex;flex-direction:column}.st small{font-size:14px;font-weight:500;line-height:1.35;min-height:2.7em}.st p{margin-top:auto;padding-top:6px;line-height:1.4}
+.num{font-size:clamp(40px,5vw,64px);white-space:nowrap;font-variant-numeric:tabular-nums;margin:10px 0 8px}
+.pane{line-height:1.55;font-size:18px}.pane ul{margin:12px 0 0;padding-left:22px}.pane li{margin:0 0 8px}
+.lead{line-height:1.5}h3{margin:64px 0 20px}.carry{line-height:1.5;font-size:21px}
+h1{font-size:clamp(40px,8.5vw,96px)}.btns{margin-top:40px}
+.num.tx{font-size:clamp(26px,3vw,38px);white-space:normal;line-height:1.15;letter-spacing:-.02em}
+.st5{grid-template-columns:repeat(6,1fr)}.st5 .st{grid-column:span 2}.st5 .st:nth-child(n+4){grid-column:span 3}
+@media(max-width:800px){.st5{grid-template-columns:1fr}.st5 .st,.st5 .st:nth-child(n+4){grid-column:auto}}
+.flips{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start}.flip[aria-expanded=true] em{max-height:900px}
+.hero{position:relative;overflow:hidden;--mx:50%;--my:40%}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(190px circle at var(--mx) var(--my),rgba(41,151,255,.24),rgba(191,90,242,.1) 50%,transparent 100%);pointer-events:none}
+.hero>*{position:relative}
+h1{transition:transform .3s ease-out;--x:50%;--y:50%;background:radial-gradient(170px circle at var(--x) var(--y),#fff 0,#8b8b95 100%);-webkit-background-clip:text;background-clip:text;color:transparent;will-change:transform}
+h1 .g{filter:hue-rotate(var(--hue,0deg))}
+.btns a,.tabs button,.tg button,nav a{transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s,background .25s,color .25s,border-color .25s}
+@media(hover:hover){
+.btns a:hover{transform:scale(1.1);background:#2997ff;box-shadow:0 0 30px rgba(41,151,255,.75)}
+.btns a.o:hover{color:#fff}
+.tabs button:hover,.tg button:hover{transform:scale(1.1);border-color:var(--acc);box-shadow:0 0 22px color-mix(in srgb,var(--acc) 65%,transparent)}
+.flip{transition:transform .25s,box-shadow .25s,border-color .25s}.flip:hover{transform:scale(1.03);border-color:var(--acc);box-shadow:0 0 26px color-mix(in srgb,var(--acc) 40%,transparent)}
+nav a:hover{opacity:1;color:var(--acc)}}
+</style></head><body>
+<nav><b>Вячеслав Белов</b><span><a href="#college">Колледж</a><a href="#agifta">АГИФТА</a><a href="#contact">Контакты</a></span></nav>
+
+<header class="hero">
+<p class="k">Директор по маркетингу · стаж 12 лет · г. Казань</p>
+<h1>Анализирую.<br>Строю стратегию.<br><span class="g">Достигаю результата.</span></h1>
+
+<div class="btns"><a href="#college">Колледж: рост набора в 5,7 раза</a><a class="o" href="#agifta">Агифта: лид в 4 раза дешевле</a></div>
+</header>
+
+<section id="college">
+<p class="tag rv">Колледж государственной и муниципальной службы · 2015–2020</p>
+<h2 class="rv">Рост набора в 5,7 раза<br>при рекламе ~200 тыс. ₽ в год</h2>
+<p class="lead rv">Частный колледж: пожарные, спасатели, полицейские, юристы. Набор годами стоял на 150–170 человек, руководство считало, что больше не набрать. Вместе с филиалом он вырос до 864 курсантов. Моя роль — руководитель отдела маркетинга и продаж.</p>
+<div class="stats st5">
+<div class="st rv"><small>Головной колледж<br>было 150–170</small><div class="num" data-to="462">0</div><p>курсантов в год</p></div>
+<div class="st rv"><small>Филиал в Йошкар-Оле<br>старт с нуля</small><div class="num" data-to="402">0</div><p>курсанта за 3 года, лидер региона среди платных колледжей</p></div>
+<div class="st rv"><small>Выручка<br>головного колледжа</small><div class="num" data-to="7" data-pre="×">0</div><p>по открытым данным РБК</p></div>
+<div class="st rv"><small>Реклама<br>во ВКонтакте</small><div class="num" data-to="200" data-pre="~" data-suf=" тыс.">0</div><p>рублей в год</p></div>
+<div class="st rv"><small>Первые места<br>по всем специальностям</small><div class="num tx">Победители WorldSkills Russia</div><p>ежегодно в Удмуртии</p></div>
+</div>
+
+<h3 class="rv">Как это было</h3>
+<div class="tabs rv" data-t="c">
+<button class="on">Входные данные</button><button>Анализ и ВК</button><button>SMM</button><button>Фокус</button><button>Доп. доход</button><button>Филиал</button></div>
+<div data-p="c">
+<div class="pane on">Набор в головном колледже ежегодно стоит на уровне 150–170 человек и не растёт. Колледж пытается внедрять новые специальности, но упирается в различные проблемы, которые в итоге снижают общее качество обучения. Отсутствие роста не позволяет удерживать профессиональных преподавателей, что дополнительно бьёт по качеству. Отдела продаж нет. Маркетинга нет. Есть заместитель директора, ответственный за работу со школами: на поездки уходит огромный бюджет при минимальном выхлопе. Соцсетей и работы в них нет, взаимодействие с абитуриентами происходит раз в месяц на дне открытых дверей.</div>
+<div class="pane">Сначала проанализировал, откуда реально приходят абитуриенты. Из ~40 школ, куда ездили, результат давали 7. Остальные поездки отменил. Затем нашёл простой и быстрый способ дотянуться почти до всех школьников — ВКонтакте. Школы в то время требовали работать через ВК, там же было школьное расписание. Поэтому я за минимальный бюджет доходил до всей аудитории 9-классников. Деньги, сэкономленные на поездках, вложил в таргет ВК и собрал воронку: диалог, прогрев в течение года, ежемесячные дни открытых дверей, старт приёмной комиссии.</div>
+<div class="pane">С нуля выстроил ВК, Instagram и YouTube с собственным видеопроизводством и SMM-отделом внутри колледжа. Благодаря мотивационным роликам аудитория собиралась со всей России, и начались поступления из разных регионов. Курсанты поступали даже из ХМАО. Взял под контроль дни открытых дверей и приёмную комиссию, убрал точки, где терялись абитуриенты.</div>
+<div class="pane">Два года убеждал руководство закрыть экономику и программирование: на каждую с трудом набиралась одна группа, а маркетинг распылялся. Мы сфокусировались на трёх специальностях и смогли дать по ним лучшее образование. Это подтверждают результаты: колледж ежегодно занимал первые места по всем специальностям на WorldSkills Russia в Удмуртии. Набор рос каждый год, в 2020 на одной специальности набрали 8 групп по 25–27 человек, а колледж стал лидером по числу курсантов среди платных колледжей.</div>
+<div class="pane">Колледж получал оплату раз в год, летом, и к весне у него постоянно возникал кассовый разрыв, пока не приходили новые оплаты. Я убрал кассовый разрыв за счёт дополнительных источников дохода в течение года: автошкола, собственное ателье (пошив формы для всех курсантов и мерч), партнёрство с театрами и кинотеатрами. Выручка выросла в 7 раз. Около 70% её сейчас приносит обучение, около 30% — дополнительные источники дохода.</div>
+<div class="pane">В 2017 году открыл филиал в г. Йошкар-Оле и взял на себя всю работу по маркетингу и продажам. К 2020 году набор в филиале вырос до 402 курсантов в год, и он стал лидером по набору среди всех платных колледжей.</div>
+</div>
+
+<h3 class="rv">Что не сработало</h3>
+<div class="flips rv">
+<button class="flip" aria-expanded="false"><b>Новые специальности</b><em>Изначально мне поставили задачу увеличить ежегодный набор в 2 раза, и основным инструментом предлагали расширение списка специальностей. До меня колледж открыл экономику и программирование и был готов расширять дальше то, что я сочту нужным.<br><br>В итоге я нашёл способ расти без специальностей, которые тянули нас вниз.</em></button>
+<button class="flip" aria-expanded="false"><b>Работа со школами</b><em>Изначальная гипотеза выглядела перспективной: если наша ЦА — школьники, давайте ездить в школы и общаться с ними, так делают все. Но сами поездки никто не анализировал, поэтому не было понимания, что большинство из них неэффективны. Колледж тратил огромное количество человеко-часов на договоры со школами, подготовку, поездки, презентации и так далее, а выхлоп был минимальным.<br><br>Анализ показал, что результат после поездок дают только 7 из 40 школ. Эффективные я оставил, а сэкономленный бюджет перенаправил в таргетированную рекламу.</em></button>
+</div>
+<div class="carry rv"><small>Что переношу на новое место</small>Аналитика и стратегия прежде всего.<br>Фокус на сильных сторонах компании.<br>Умение эффективно работать даже с небольшими рекламными бюджетами.</div>
+</section>
+
+<section id="agifta" class="full"><div>
+<p class="tag rv">Агифта · сувенирная продукция для бизнеса · 2021</p>
+<h2 class="rv">Стоимость лида<br>в 4 раза ниже.</h2>
+<p class="lead rv">B2B: сувенирная продукция и мерч для бизнеса. Флагман лидогенерации — бумажные ручки с нанесением логотипа. Полтора месяца компания была в кризисе: средняя цена лида превысила 1000 ₽, и каждая продажа уходила в убыток. Большой штат менеджеров больше половины рабочего времени сидел без работы из-за нехватки лидов. Подрядчиков меняли каждые две недели, эффекта это не давало.</p>
+<div class="tg rv"><button class="on" data-v="240">Стало</button><button data-v="1000">Было</button></div>
+<div class="big now rv" id="cpl"><small style="color:var(--mut)">стоимость лида, цель была &lt; 500 ₽</small><div class="num" id="cplnum">0</div></div>
+<div class="stats" id="ast" style="margin-top:16px">
+<div class="st rv"><small>лидов</small><div class="num" data-to="80" data-pre="+" data-suf="%">0</div><p>к исходному уровню</p></div>
+<div class="st rv"><small>конверсия лендинга в лид</small><div class="num" data-to="11.4" data-suf="%" data-d="1">0</div><p>было 5–6% (средняя)</p></div>
+<div class="st rv"><small>выручка, февраль → июнь 2021</small><div class="num" data-to="35" data-pre="+" data-suf="%">0</div><p>за четыре месяца</p></div>
+<div class="st rv"><small>ROI email-рассылки<br>по базе, первый месяц</small><div class="num" data-to="4500" data-suf="%">0</div><p>около 12% выручки</p></div>
+</div>
+
+<h3 class="rv">Как это было</h3>
+<div class="tabs rv" data-t="a"><button class="on">С чего начал</button><button>Лидген</button><button>Аналитика</button><button>Продукт</button><button>Продажи</button><button>LTV</button></div>
+<div data-p="a">
+<div class="pane on">С первого дня мне предложили снова заменить подрядчика. Я отказался и сразу занялся глубокой аналитикой. Что выявил:<ul><li>подрядчики не понимали, для кого делают рекламу;</li><li>не было сквозной аналитики и обратной связи от отдела продаж к маркетингу;</li><li>не было системной работы по лидгену;</li><li>слабая посадочная страница;</li><li>не было структурной работы по LTV;</li><li>в CRM был беспорядок.</li></ul></div>
+<div class="pane">Проверили более 200 гипотез по связкам и аудиториям. Уделили большое внимание обучению каждой рекламной кампании и считали результат только после обучения. Провели более 40 тестов посадочных страниц и увеличили конверсию в 2 раза. ROAS считали по каждой рекламной кампании, чтобы оставлять только окупаемые. До меня ROAS считался по источнику в целом, потому что не было правильной UTM-разметки.</div>
+<div class="pane">Провёл полный анализ бизнеса: продажи, маркетинг, логистика, склад. Составил список проблем и структурировал его по матрице Эйзенхауэра. Навёл порядок в CRM, внедрил UTM-разметку.</div>
+<div class="pane">Бумажные ручки продавали более 50 конкурентов, и большинство предлагали цены ниже. Наше УТП было в эмоциях, а не в цене: быстрое и лучшее общение, «бесплатный» дизайн мерча для клиента. Чтобы эффект «вау» не заканчивался на покупке, мы с дизайнерами доработали упаковку: клиент получал позитивные эмоции и при открытии, и становился постоянным покупателем.</div>
+<div class="pane">Не останавливался на маркетинге, плотно работал с РОП над дожимом лидов. Мы победили вечный конфликт маркетинга и продаж. Внедрили индивидуальные скрипты для каждого менеджера, чтобы использовать сильные стороны каждого. Вместе каждую неделю выборочно прослушивали звонки и дорабатывали воронку.</div>
+<div class="pane">Наведя порядок в лидгене, приступил к работе по LTV. В базе было 13 000+ клиентов, более 90% купили один раз и не вернулись. Сегментировал базу и тестировал разные гипотезы возврата. Email-рассылка: ROI 4500% в первый месяц. WhatsApp окупался на ~200%. Telegram-канал для клиентов: 400 подписчиков и 7–15 бесплатных лидов в неделю.</div>
+</div>
+
+<h3 class="rv">Что не сработало</h3>
+<div class="flips rv">
+<button class="flip" aria-expanded="false"><b>MyTarget</b><em>Результат был нестабильным и до меня, и при мне. Отказались от канала.</em></button>
+<button class="flip" aria-expanded="false"><b>SMS по базе</b><em>Результат неудовлетворительный, закрыл тест.</em></button>
+<button class="flip" aria-expanded="false"><b>Обзвон колл-центром</b><em>Звонки по старым клиентам тоже не дали результата.</em></button>
+</div>
+<div class="carry rv"><small>Что переношу на новое место</small>Прежде чем принимать эмоциональные решения, выясняю, где ломается воронка и понимает ли команда, что она продаёт.<br>Считаю окупаемость каждой кампании.<br>Структурирую работу даже тогда, когда решения нужно принимать быстро.</div>
+</div></section>
+
+<footer id="contact"><h2 class="rv">Обсудим ваши задачи.</h2>
+<a href="tel:+79377715394">+7 (937) 771-53-94</a>
+<a href="mailto:v.belov1991@yandex.ru">v.belov1991@yandex.ru</a>
+<a href="https://vk.com/viacheslav_belov">vk.com/viacheslav_belov</a></footer>
+
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');var n=e.target.querySelector('.num[data-to]');if(n)cnt(n);if(e.target.classList.contains('st')||e.target.classList.contains('num'))cnt(e.target.querySelector('.num')||e.target);io.unobserve(e.target)}})},{threshold:.25});
+document.querySelectorAll('.rv').forEach(function(x){io.observe(x)});
+function cnt(n){if(!n||n.dataset.done||!n.dataset.to)return;n.dataset.done=1;var to=+n.dataset.to,d=+n.dataset.d||0,p=n.dataset.pre||'',s=n.dataset.suf||'',t0=performance.now();
+(function f(t){var k=Math.min(1,(t-t0)/1800),v=to*(1-Math.pow(1-k,4));n.textContent=p+(d?v.toFixed(d).replace('.',','):Math.round(v))+s;if(k<1)requestAnimationFrame(f)})(t0)}
+document.querySelectorAll('.tabs').forEach(function(t){var ps=document.querySelector('[data-p="'+t.dataset.t+'"]').children,bs=t.children;
+Array.prototype.forEach.call(bs,function(b,i){b.onclick=function(){Array.prototype.forEach.call(bs,function(x,j){x.classList.toggle('on',i==j);ps[j].classList.toggle('on',i==j)})}})});
+document.querySelectorAll('.flip').forEach(function(b){b.onclick=function(){b.setAttribute('aria-expanded',b.getAttribute('aria-expanded')!='true')}});
+var cn=document.getElementById('cplnum'),cur=0,box=document.getElementById('cpl');
+function tween(to){var from=cur,t0=performance.now();(function f(t){var k=Math.min(1,(t-t0)/1200),v=from+(to-from)*(1-Math.pow(1-k,3));cur=v;cn.textContent=Math.round(v)+' ₽';if(k<1)requestAnimationFrame(f)})(t0)}
+var seen=false;new IntersectionObserver(function(e){if(e[0].isIntersecting&&!seen){seen=true;cur=1000;tween(240)}},{threshold:.4}).observe(box);
+document.querySelectorAll('.tg button').forEach(function(b){b.onclick=function(){document.querySelectorAll('.tg button').forEach(function(x){x.classList.toggle('on',x==b)});var v=+b.dataset.v;box.className='big rv in '+(v==240?'now':'was');tween(v);showStats(v==240)}});
+var ast=document.getElementById('ast'),cards=ast.querySelectorAll('.st'),tm;
+function showStats(on){clearTimeout(tm);
+if(!on){cards.forEach(function(c){c.classList.remove('in')});tm=setTimeout(function(){ast.style.display='none'},700);return}
+ast.style.display='';
+cards.forEach(function(c,i){var n=c.querySelector('.num');n.textContent='0';delete n.dataset.done;setTimeout(function(){c.classList.add('in');cnt(n)},200+i*180)})}
+var hero=document.querySelector('.hero'),h1=hero.querySelector('h1');
+hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect(),h=h1.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,nx=x/r.width-.5,ny=y/r.height-.5;
+hero.style.setProperty('--mx',x+'px');hero.style.setProperty('--my',y+'px');
+h1.style.setProperty('--x',(e.clientX-h.left)+'px');h1.style.setProperty('--y',(e.clientY-h.top)+'px');h1.style.setProperty('--hue',(nx*160)+'deg');
+h1.style.transform='perspective(900px) rotateY('+(nx*10)+'deg) rotateX('+(-ny*8)+'deg)'});
+hero.addEventListener('pointerleave',function(){h1.style.transform='';h1.style.setProperty('--hue','0deg')});
+</script></body></html>
