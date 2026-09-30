@@ -96,23 +96,49 @@ h1{margin:0;font-size:clamp(46px,7.8vw,112px);line-height:1;letter-spacing:-.045
 .case h3{margin:22px 0 0;font-size:clamp(40px,5.6vw,80px);line-height:1.02;letter-spacing:-.04em;font-weight:800;max-width:1100px}
 .lead{margin:32px 0 0;display:flex;flex-direction:column;gap:6px;font-size:clamp(18px,1.6vw,23px);line-height:1.5;color:var(--fg2)}
 .duo{margin-top:clamp(50px,5.5vw,80px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
-.chartcard.wide{grid-column:1/-1}
-.chartcard.wide .chart{height:520px;gap:clamp(24px,5vw,80px)}
-.chartcard.wide .col.before{width:clamp(90px,16%,240px)}
-.chartcard.wide .col.before .bar{height:120px}
-.chartcard.wide .col .v{font-size:clamp(32px,3.6vw,54px)}
-.chartcard.wide .plus{width:clamp(56px,7vw,110px);margin-bottom:90px}
-.chartcard.wide .plus svg{width:44px;height:44px}
-.chartcard.wide .axis{gap:clamp(24px,5vw,80px);font-size:18px}
-.chartcard.wide .axis .a1{width:clamp(90px,16%,240px)}
-.chartcard.wide .axis .a2 .gap{flex:0 0 clamp(56px,7vw,110px)}
-.chartcard.wide .bracket .sum b{font-size:clamp(40px,4.4vw,64px)}
-.chartcard.wide .bracket .sum span{font-size:19px}
 .chartcard{grid-column:span 7;padding:clamp(28px,3.4vw,48px) clamp(24px,3.6vw,52px) clamp(28px,3vw,44px);display:flex;flex-direction:column;border-radius:36px}
 .inkcard{grid-column:span 5;background:var(--ink);color:var(--inkfg);border-radius:36px;padding:clamp(28px,3.4vw,48px);display:flex;flex-direction:column;box-shadow:0 0 0 1px var(--inkline);transition:background-color .4s}
 .clabel{font-size:17px;font-weight:600;color:var(--mut)}
 .inkcard .clabel{color:var(--inkmut)}
 .inkcard .big{margin-top:14px;font-family:"Onest",sans-serif;font-size:clamp(32px,3vw,44px);font-weight:700;letter-spacing:-.03em;line-height:1.08}
+.duo{position:relative}
+.inkcard.budget{position:relative;overflow:hidden;justify-content:space-between;gap:30px;background:radial-gradient(520px circle at 110% -10%,rgba(41,151,255,.22),transparent 60%),var(--ink)}
+.budget .eb{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--inkmut);line-height:1.45}
+.budget .cost{display:flex;flex-direction:column}
+.budget .bn{margin-top:18px;font-family:"Onest",sans-serif;font-size:clamp(76px,7.4vw,116px);font-weight:800;letter-spacing:-.05em;line-height:.92;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
+.budget .bn small{font-size:.5em;letter-spacing:-.02em;margin-left:.08em;color:rgba(255,255,255,.55);font-weight:700}
+.budget .once{margin-top:14px;font-size:15px;color:var(--inkmut)}
+.budget .rev{position:relative;display:flex;flex-direction:column;transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.js .budget:not(.rev-on) .rev{opacity:0;transform:translateY(16px)}
+.budget .sep{display:block;height:1px;margin:auto 0;background:linear-gradient(90deg,rgba(255,255,255,.24),rgba(255,255,255,.03));transform-origin:left;transition:transform 1.1s cubic-bezier(.6,0,.2,1)}
+.js .budget:not(.rev-on) .sep{transform:scaleX(0)}
+.budget .rrow{margin-top:16px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.budget .rn{font-family:"Onest",sans-serif;font-size:clamp(46px,4.5vw,68px);font-weight:800;letter-spacing:-.04em;line-height:1;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap;transition:color .6s,text-shadow .6s,transform .5s cubic-bezier(.3,1.6,.5,1)}
+.budget .rn.fin{color:#64d2ff;text-shadow:0 0 28px rgba(100,210,255,.35);transform:scale(1.03);transform-origin:left bottom}
+.budget .rc{position:relative;height:1.4em;overflow:hidden;margin-top:12px;font-size:17px;font-weight:600;color:rgba(255,255,255,.9)}
+.budget .rc span{position:absolute;left:0;top:0;white-space:nowrap;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .45s}
+.budget .rc span.out{transform:translateY(-110%);opacity:0}
+.budget .rc span.in{transform:translateY(110%);opacity:0}
+.budget .yrs{margin-top:18px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.budget .yrs i{position:relative;height:8px;border-radius:4px;background:rgba(255,255,255,.1);overflow:hidden}
+.budget .yrs i::after{content:"";position:absolute;inset:0;border-radius:4px;background:linear-gradient(90deg,#2997ff,#64d2ff);transform-origin:left;transform:scaleX(1);transition:transform 1s cubic-bezier(.3,.8,.2,1)}
+.js .budget .yrs i:not(.on)::after{transform:scaleX(0)}
+.budget .yrs i.on{box-shadow:0 0 14px rgba(100,210,255,.25)}
+.budget .rnote{margin-top:14px;font-size:13px;color:var(--inkmut)}
+.link{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:3}
+.link path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+#linkPath{stroke:var(--acc);stroke-width:2;stroke-dasharray:1;stroke-dashoffset:0;transition:stroke-dashoffset 2s cubic-bezier(.33,1,.68,1)}
+#linkFlow{stroke:#9fd6ff;stroke-width:3;stroke-dasharray:.14 1.2;stroke-dashoffset:.14;opacity:0}
+.link.flow #linkFlow{opacity:1;animation:flow 3.6s cubic-bezier(.5,0,.3,1) infinite}
+@keyframes flow{0%{stroke-dashoffset:.14}45%,100%{stroke-dashoffset:-1.06}}
+#linkEnd{fill:var(--acc);stroke:var(--bg2);stroke-width:3;transition:opacity .2s 1.6s}
+#linkStart{fill:var(--acc);stroke:var(--bg2);stroke-width:3;transition:opacity .25s}
+#linkRing{fill:none;stroke:var(--acc);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center}
+.link.hit #linkRing{animation:ring 1.1s cubic-bezier(.2,.8,.2,1) 1}
+@keyframes ring{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(3.2)}}
+.js .link:not(.go) #linkPath{stroke-dashoffset:1}
+.js .link:not(.go) #linkStart,.js .link:not(.go) #linkEnd{opacity:0}
+.link.desk #linkStart{display:none}
 .inkcard .note{margin-top:30px;font-size:17px;line-height:1.5;color:var(--inkmut)}
 
 /* college chart */
@@ -136,11 +162,11 @@ h1{margin:0;font-size:clamp(46px,7.8vw,112px);line-height:1;letter-spacing:-.045
 .plus path.h{transition-delay:1.7s}.plus path.vv{transition-delay:2s}
 .js .chart:not(.in) .plus path{stroke-dashoffset:24}
 .bracket{display:flex;flex-direction:column;align-items:center;margin-bottom:18px}
-.bracket .sum{display:flex;align-items:baseline;gap:10px;transition:opacity .6s 2.5s,transform .6s cubic-bezier(.3,1.5,.5,1) 2.5s}
+.bracket .sum{display:flex;align-items:baseline;gap:10px;transition:opacity .5s 2.6s,transform .5s cubic-bezier(.3,1.5,.5,1) 2.6s}
 .bracket .sum b{font-family:"Onest",sans-serif;font-size:clamp(34px,3.6vw,52px);font-weight:800;letter-spacing:-.03em;color:var(--acc);font-variant-numeric:tabular-nums}
 .bracket .sum span{font-size:16px;font-weight:600;color:var(--fg2)}
 .bracket .br{margin-top:10px;width:100%;height:14px;position:relative}
-.bracket .br i{position:absolute;top:0;height:14px;width:50%;border-top:2px solid var(--acc);transition:transform 1s cubic-bezier(.6,0,.2,1) 2.1s}
+.bracket .br i{position:absolute;top:0;height:14px;width:50%;border-top:2px solid var(--acc);transition:transform 1s cubic-bezier(.6,0,.2,1) 1.2s}
 .bracket .br i.l{right:50%;border-left:2px solid var(--acc);border-top-left-radius:10px;transform-origin:right}
 .bracket .br i.r{left:50%;border-right:2px solid var(--acc);border-top-right-radius:10px;transform-origin:left}
 .js .chart:not(.in) .bracket .br i{transform:scaleX(0)}
@@ -179,6 +205,7 @@ h1{margin:0;font-size:clamp(46px,7.8vw,112px);line-height:1;letter-spacing:-.045
 
 /* stat cards */
 .tri{margin-top:24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.tri.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 .stat{padding:clamp(28px,2.8vw,40px) clamp(26px,3vw,44px);display:flex;flex-direction:column;gap:12px}
 .stat .n{font-family:"Onest",sans-serif;font-size:clamp(48px,5vw,72px);font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--acc);font-variant-numeric:tabular-nums;white-space:nowrap}
 .stat .n.md{font-size:clamp(34px,3vw,46px);line-height:1.1;padding:.12em 0}
@@ -263,6 +290,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset
 /* responsive */
 @media (max-width:1000px){
   .duo{grid-template-columns:1fr}.chartcard,.inkcard{grid-column:auto}
+  #collegeDuo{row-gap:64px}
   .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .carry .g3{grid-template-columns:1fr;gap:28px}
 }
@@ -275,16 +303,11 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset
   .mstep{padding-left:88px;position:relative;min-height:62px}
   .mstep .k{position:absolute;left:0;top:0}
   .mstep b{margin-top:10px}
-  .kpis,.tri,.steps,.steps.two{grid-template-columns:1fr}
+  .kpis,.tri,.tri.two,.steps,.steps.two{grid-template-columns:1fr}
   .chart,.cpl{height:340px}
   .col.before .bar{height:84px}
   .pair .col.c2 .bar{height:190px!important}.pair .col.c3 .bar{height:165px!important}.col.before .bar{height:62px}
-  .chart,.chartcard.wide .chart{height:380px}
-  .chartcard.wide .col.before .bar{height:62px}
-  .chartcard.wide .col .v{font-size:28px}
-  .chartcard.wide .plus{width:44px;margin-bottom:40px}.chartcard.wide .plus svg{width:30px;height:30px}
-  .chartcard.wide .axis{font-size:14px;gap:clamp(20px,3vw,40px)}.chartcard.wide .axis .a1{width:clamp(80px,20%,150px)}.chartcard.wide .axis .a2 .gap{flex:0 0 44px}
-  .chartcard.wide .bracket .sum b{font-size:34px}.chartcard.wide .bracket .sum span{font-size:13px}
+  .chart{height:380px}
   .cpl .c1 .bar{height:250px}.cpl .c2 .bar{height:60px}.target{bottom:125px}
   .plus{margin-bottom:40px}
   .start ul{columns:1}
@@ -347,8 +370,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset
       <span>Моя роль — руководитель отдела маркетинга и продаж.</span>
     </div>
 
-    <div class="duo">
-      <div class="card chartcard wide rv">
+    <div class="duo" id="collegeDuo">
+      <svg class="link" id="linkSvg" aria-hidden="true"><path id="linkPath" pathLength="1" d="M0 0"/><path id="linkFlow" pathLength="1" d="M0 0"/><circle id="linkStart" r="5" cx="0" cy="0"/><circle id="linkRing" r="6" cx="0" cy="0"/><circle id="linkEnd" r="6" cx="0" cy="0"/></svg>
+      <div class="card chartcard rv">
         <span class="clabel">Новых курсантов в год</span>
         <div class="chart rv" id="collegeChart">
           <div class="col before"><span class="v">150</span><div class="bar"></div></div>
@@ -358,19 +382,34 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset
               <div class="br"><i class="l"></i><i class="r"></i></div>
             </div>
             <div class="pair">
-              <div class="col c2"><span class="v">462</span><div class="bar" style="height:340px"></div></div>
+              <div class="col c2"><span class="v">462</span><div class="bar" style="height:280px"></div></div>
               <div class="plus"><svg viewBox="0 0 30 30" aria-hidden="true"><path class="h" d="M3 15h24"/><path class="vv" d="M15 3v24"/></svg></div>
-              <div class="col c3"><span class="v">402</span><div class="bar" style="height:296px"></div></div>
+              <div class="col c3"><span class="v">402</span><div class="bar" style="height:244px"></div></div>
             </div>
           </div>
         </div>
         <div class="axis"><span class="a1">До меня</span><div class="a2"><span>Головной колледж</span><span class="gap"></span><span><span class="hide-s">Новый филиал в Йошкар-Оле</span><span class="show-s">Филиал</span></span></div></div>
       </div>
+
+      <div class="inkcard budget rv d1" id="budgetCard">
+        <div class="cost">
+          <span class="eb">Стоимость привлечения<br>одного нового курсанта</span>
+          <span class="bn"><span id="budgetNum" data-to="230" data-pre="~">~230</span><small>₽</small></span>
+          <span class="once">только таргетированная реклама</span>
+        </div>
+        <i class="sep" aria-hidden="true"></i>
+        <div class="rev">
+          <span class="eb">Выручка с одного курсанта</span>
+          <div class="rrow"><span class="rn" id="revNum">220 000 ₽</span></div>
+          <div class="rc" id="revCap"><span>за 4 года обучения</span></div>
+          <div class="yrs" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+          <span class="rnote">49–55 тыс. ₽ в год, курсанты учатся 4 года. Расчёт по головному колледжу</span>
+        </div>
+      </div>
     </div>
 
-    <div class="tri">
+    <div class="tri two">
       <div class="card lift stat rv"><span class="n" data-to="7" data-pre="×">×7</span><span>выручка головного колледжа</span></div>
-      <div class="card lift stat rv d1"><span class="n md" data-to="200" data-pre="~" data-suf=" тыс. ₽">~200 тыс. ₽</span><span>бюджет на рекламу в год</span></div>
       <div class="card lift stat ws rv d2"><span class="n sm">Победители WorldSkills Russia</span><span>ежегодно в Удмуртии</span>
         <svg class="medal" viewBox="0 0 68 88" aria-hidden="true">
           <defs>
@@ -545,13 +584,63 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset
   var root=document.documentElement;
 
 
+  /* стрелка от графика к карточке бюджета */
+  var duo=document.getElementById('collegeDuo'),lsvg=document.getElementById('linkSvg'),lp=document.getElementById('linkPath'),lf=document.getElementById('linkFlow'),ls=document.getElementById('linkStart'),le=document.getElementById('linkEnd'),lr=document.getElementById('linkRing');
+  var bcard=document.getElementById('budgetCard'),bnum=document.getElementById('budgetNum'),linkGo=false,cardIn=false,budgetDone=false;
+  function drawLink(){
+    if(!duo||!lsvg)return;
+    function off(el){var y=0;while(el&&el!==duo){var t=getComputedStyle(el).transform;if(t&&t!=='none'){var m=t.match(/matrix\(([^)]+)\)/);if(m)y+=parseFloat(m[1].split(',')[5])}el=el.parentElement}return y}
+    function rc(el){var b=el.getBoundingClientRect(),y=off(el);return {left:b.left,right:b.right,top:b.top-y,bottom:b.bottom-y,width:b.width}}
+    var o=duo.getBoundingClientRect(),card=rc(bcard),cc=rc(duo.querySelector('.chartcard')),br=rc(duo.querySelector('.bracket .br i.r')),d,sx,sy,ex,ey;
+    if(window.innerWidth>1000){
+      sx=br.right-o.left-12;sy=br.top-o.top+1;ex=card.left-o.left;ey=sy;
+      d='M'+sx+' '+sy+' H'+ex;lsvg.classList.add('desk');
+    }else{
+      sx=cc.left-o.left+cc.width/2;sy=cc.bottom-o.top;ex=sx;ey=card.top-o.top;
+      d='M'+sx+' '+sy+' V'+ey;lsvg.classList.remove('desk');
+    }
+    lp.setAttribute('d',d);lf.setAttribute('d',d);
+    ls.setAttribute('cx',sx);ls.setAttribute('cy',sy);
+    [le,lr].forEach(function(c){c.setAttribute('cx',ex);c.setAttribute('cy',ey)});
+  }
+  var revNum=document.getElementById('revNum'),revCap=document.getElementById('revCap'),yrs=bcard?bcard.querySelectorAll('.yrs i'):[];
+  var revVals=[55000,110000,165000,220000],revCaps=['за 1 год обучения','за 2 года обучения','за 3 года обучения','за 4 года обучения'];
+  function fmtR(v){return Math.round(v).toLocaleString('ru-RU').replace(/ |,/g,' ')+' ₽'}
+  function tweenRev(a,b,ms){var t0=performance.now();(function f(t){var k=Math.min(1,(t-t0)/ms),e=1-Math.pow(1-k,3);revNum.textContent=fmtR(a+(b-a)*e);if(k<1)requestAnimationFrame(f)})(t0)}
+  function setCap(txt){
+    var old=revCap.querySelector('span'),n=document.createElement('span');
+    n.textContent=txt;n.className='in';revCap.appendChild(n);
+    requestAnimationFrame(function(){requestAnimationFrame(function(){n.className='';if(old){old.className='out';setTimeout(function(){old.remove()},460)}})});
+  }
+  function runRev(){
+    revVals.forEach(function(v,i){setTimeout(function(){
+      yrs[i].classList.add('on');
+      if(i)setCap(revCaps[i]);
+      tweenRev(i?revVals[i-1]:0,v,i?425:500);
+      if(i===3)setTimeout(function(){revNum.classList.add('fin')},425);
+    },i*750)});
+  }
+  if('IntersectionObserver' in window&&bcard){
+    bnum.textContent='~0';revNum.textContent='0 ₽';revCap.innerHTML='<span>'+revCaps[0]+'</span>';
+    [].forEach.call(yrs,function(y){y.classList.remove('on')});
+  }
+  function tryBudget(){
+    if(budgetDone||!linkGo||!cardIn)return;budgetDone=true;
+    var late=lsvg.classList.contains('go'),D=late?1800:2400;
+    count(bnum,0,D);
+    setTimeout(function(){lsvg.classList.add('hit','flow')},D-300);
+    setTimeout(function(){bcard.classList.add('rev-on')},D+500);
+    setTimeout(runRev,D+1100);
+  }
+  if(lsvg){window.addEventListener('resize',drawLink);drawLink();setTimeout(drawLink,600)}
+
   /* counters */
   function fmt(v,d){return d?v.toFixed(d).replace('.',','):String(Math.round(v))}
-  function count(el,delay){
+  function count(el,delay,dur){
     if(el.dataset.done)return;el.dataset.done=1;
     var to=+el.dataset.to,from=el.dataset.from?+el.dataset.from:0,d=+(el.dataset.d||0),pre=el.dataset.pre||'',suf=el.dataset.suf||'';
     el.textContent=pre+fmt(from,d)+suf;
-    setTimeout(function(){var t0=performance.now();(function f(t){var k=Math.min(1,(t-t0)/1800),e=1-Math.pow(1-k,4);el.textContent=pre+fmt(from+(to-from)*e,d)+suf;if(k<1)requestAnimationFrame(f)})(t0)},delay||0);
+    setTimeout(function(){var t0=performance.now();(function f(t){var k=Math.min(1,(t-t0)/(dur||1800)),e=1-Math.pow(1-k,dur?3:4);el.textContent=pre+fmt(from+(to-from)*e,d)+suf;if(k<1)requestAnimationFrame(f)})(t0)},delay||0);
   }
 
   /* reveal */
@@ -561,7 +650,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset
     if(!e.isIntersecting)return;
     var el=e.target;el.classList.add('in');io.unobserve(el);
     el.querySelectorAll('.n[data-to]').forEach(function(n){count(n,250)});
-    if(el.id==='collegeChart'){var s=el.querySelector('[data-lazy]');s.textContent='0';setTimeout(function(){count(s,0)},2500)}
+    if(el.id==='collegeChart'){var s=el.querySelector('[data-lazy]');s.textContent='0';setTimeout(function(){linkGo=true;tryBudget()},1800);setTimeout(function(){drawLink();lsvg.classList.add('go')},2200);setTimeout(function(){count(s,0,1400)},2600)}
+    if(el.id==='budgetCard'){cardIn=true;tryBudget()}
   })},{threshold:.2,rootMargin:'0px 0px -6% 0px'});
   els.forEach(function(el){io.observe(el)});
 
